@@ -1,0 +1,95 @@
+# Guía de uso: de la idea al storyboard
+
+Guía para quien usa el sistema; no la leen las skills. Se trabaja con la palabra **Amenábar**: él lee tu proyecto, te dice en qué fase estás y cuál es el siguiente paso, con la frase exacta que tienes que escribir.
+
+**Si empiezas, haz primero `references/ex00-kiss.md`:** un ejercicio con 1 personaje, 1 localización, 1 objeto, sin diálogo ni lip sync.
+
+**Meta de esta guía:** un **storyboard**, es decir la secuencia de viñetas de todos los planos del montaje, con imagen inicial aprobada donde haga falta (no se exige una imagen distinta por plano: si basta la misma referencia con otro encuadre, se reutiliza). Se llega con: brief → guion → desglose → plan de referencias → referencias (personajes, localizaciones, objetos, hoja de vestuario opcional) → composición de cada plano. El vídeo, la revisión de resultados (`repair`), el plan de montaje (`edit-plan`) y el audio vienen después y están al final como «Más allá del storyboard». El sistema solo redacta: tú pegas los prompts en Magnific (y en la herramienta de audio que uses). **Audio:** tú eliges al empezar: sin audio, audio externo (lo pones tú fuera de Magnific) o audio en Magnific. **Texto en imagen o vídeo:** no se pide en los prompts; títulos y rótulos se añaden después en el editor de vídeo.
+
+---
+
+## Cómo empezar
+
+Proyecto nuevo:
+
+```text
+Oye Amenábar, quiero empezar un proyecto nuevo. Mi idea: [idea en 1-3 frases].
+```
+
+Proyecto en marcha (en una conversación nueva, con el dossier pegado debajo):
+
+```text
+Oye Amenábar, sigue mi proyecto. ¿Qué toca ahora?
+
+[tu dossier]
+```
+
+Amenábar responde con un parte corto (fase actual, qué está aprobado, qué falta) y termina siempre con:
+
+> **Siguiente paso:** … Escribe: «…»
+
+Copia esa frase tal cual. No ejecuta nada por su cuenta: espera tu orden.
+
+## Las fases
+
+1. **Brief.** Responde a sus preguntas (máx. 3). «A tu criterio» y «sin marca» valen. Te preguntará por el audio: la opción recomendada es **sin audio**; las otras son **audio externo** y **audio en Magnific** (más gasto y más riesgo de fallo).
+2. **Guion.** Lo inventado va como `propuesta`. El desglose no empieza sin que apruebes el guion.
+3. **Desglose.** Planos y recursos. Revisa duraciones y «Decisiones pendientes».
+   - *Opcional, antes del plan de referencias:* **revisión de estilo.** Si el desglose te sale estático, di `Amenábar, revisa con estilo redes`. Recibes un diagnóstico con cifras y propuestas por plano; eliges cuáles se aplican. Estilos disponibles hoy: `redes` (alcance mixto: formato de vídeo corto vertical y recursos opcionales de impacto visual, que no se imponen a piezas pausadas), `autor-motivo` (tema, motivo y primer plano), `drama-personaje` (intención, estímulo y continuidad del personaje en la escena) e `intimista-observacional` (tratamiento audiovisual: cámara, luz y color al servicio de lo que se mira); otros irán en `references/estilos/`.
+4. **Plan de referencias.** Tras aprobar el desglose te da la lista `REF-01, REF-02…`: qué imágenes hay que crear y en qué orden. Las vistas salen de los planos.
+5. **Referencias.** Una REF cada vez. Para cada una recibes un prompt; lo generas en Magnific y vuelves a decir si queda aprobada.
+
+6. **Storyboard (composición).** Una viñeta por plano; la imagen inicial (`shot-composer`) se compone a partir de las referencias aprobadas, en el orden del desglose, y se reutiliza la misma referencia cuando solo cambia el encuadre. Los planos de una misma unidad de generación no repiten imagen, y un plano de texto a vídeo sin imagen inicial se te dice. Cada imagen pasa por `propuesta` → `prompt escrito` → `imagen generada` → `aprobada`. Si una imagen falla, dile qué elemento y dónde (`repair`): se diagnostica antes de regenerar. **El storyboard está listo cuando todos los planos tienen su viñeta y las imágenes necesarias aprobadas**; entonces puedes verlos en orden y ajustar el desglose antes de gastar en vídeo.
+
+## Más allá del storyboard
+
+Cuando el storyboard esté aprobado: **animática** (`edit-plan`: las imágenes en secuencia, con sus tiempos y sonido provisional; la ves y la ajustas antes de gastar en vídeo), y después **prompt de vídeo** de cada plano (necesita su imagen inicial aprobada; los límites de duración y referencias salen de `references/modelos.md` y cualquier valor «pendiente de verificar» se te dice, no se supone), **revisión** de resultados de vídeo (dile a qué segundo y qué elemento), **montaje** (`edit-plan`: orden, uniones, sonido y texto en pantalla, como plan escrito para tu editor) y **audio**.
+
+Para aprobar o corregir, en cualquier fase:
+
+```text
+Aprobado. [O: cambia X por Y.]
+```
+
+## Estados de cada entregable
+
+Hay tres ejes que no se mezclan (detalle en `references/proyecto.md`):
+- Documentos (guion, desglose, plan, animática): `propuesta` → `aprobada`.
+- Recursos (referencias, imágenes, clips, audio): `prompt escrito` → `generado` → `revisado` → `aprobada` o `descartado`.
+- Entrega (la pieza): `en montaje` → `en revisión` → `correcciones` → `exportado` → `verificado`.
+
+**Un prompt escrito no es una imagen.** Hasta que no generes la imagen y la apruebes, la referencia no cuenta como hecha. Una referencia de prioridad Alta sin aprobar bloquea la fase siguiente.
+
+## Referencias: qué esperar
+
+- **Personaje:** si necesita 2 o más vistas, se hace una **hoja de vistas** (frente, perfil, espaldas). Con una sola imagen aprobada el personaje no está cerrado.
+- **Localización:** vista general vacía; otras vistas solo si los planos las usan. Otra hora o clima es una variante aparte.
+- **Objeto:** si tienes una foto real del producto, se usa como referencia directa; no se genera una nueva.
+- **Variantes** (otro vestuario, otro estado): se hacen cuando la versión base está aprobada.
+- **Códigos:** `E01` escena, `E01-P03` plano, `PJ01` personaje, `LO01` localización, `OB01` objeto, `-v2` variante, `REF-01` referencia del plan (detalle en `references/reglas.md` §7).
+- **Visuales:** hoja de vestuario y dirección visual (luz, color, óptica) son opcionales; "sin look definido" también vale.
+
+Si lo que te da Amenábar no lo entiendes o no encaja, escríbelo con tus palabras: «no lo entiendo, explícamelo más simple» o «esto no es lo que quería: [qué]».
+
+---
+
+## Si trabajas desde el chat web
+
+El chat no guarda nada entre conversaciones y el sistema no escribe en tu disco: **tu dossier es la memoria, y lo guardas tú** (un documento tuyo: Notas, Word, un `.md`).
+
+- **Tras cada fase:** copia la sección que te da («lista para pegar») a tu dossier y actualiza `# ESTADO`. Lo que no copies, se pierde al cerrar la conversación.
+- **Al abrir una conversación nueva:** pega el dossier completo debajo de `Oye Amenábar, sigue mi proyecto. ¿Qué toca ahora?`.
+- **Guion y desglose:** déjalos dentro del dossier. Los archivos aparte (`guion.md`, `desglose.md`) solo ayudan donde Claude lee y escribe ficheros; en el chat, si el dossier te queda demasiado largo, pega también ese texto a mano.
+- **Cargar el sistema:** si no tienes la skill instalada, pega en la conversación `references/reglas.md` y el archivo de la fase en que estés. Subir la skill como paquete, adjuntar archivos o usar Proyectos en tu plan: **pendiente de verificar**.
+- **Imágenes:** se generan en Magnific. Anota en el dossier cómo la reconoces (nombre o enlace) y su estado. Para usar una aprobada como referencia, súbela de nuevo a Magnific; adjuntarla al chat para pedir una revisión: **pendiente de verificar** en tu plan.
+- **Si Claude contradice el dossier,** manda el dossier: «según mi dossier, X está aprobado; corrige tu respuesta».
+
+---
+
+## Reglas
+
+- **Una conversación nueva por fase**, con el dossier pegado (plantilla en `references/proyecto.md`). Así no se pierde el hilo.
+- **Dossier grande:** el guion y el desglose pueden vivir en su propio archivo (`guion.md`, `desglose.md`); el dossier conserva un puntero con versión y estado. Si trabajas en una conversación nueva, pega también ese archivo.
+- **Lo propuesto no es aprobado** hasta que lo digas.
+- **Comprobar coherencia:** al cerrar una fase, o cuando guion, desglose y dossier hayan cambiado por separado, di `Amenábar, comprueba coherencia`. Solo lee y te lista los conflictos con archivo y línea; no corrige nada hasta que elijas.
+- Si en algún momento no sabes qué hacer: «Oye Amenábar, ¿en qué fase estoy?».
