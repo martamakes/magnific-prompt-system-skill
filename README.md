@@ -2,7 +2,7 @@
 
 Skill de Claude Code **solo de redacción** para preparar producciones audiovisuales con IA: te entrega prompts listos para pegar en [Magnific](https://www.magnific.com) (imagen con Nano Banana, vídeo con Seedance). No genera imágenes, vídeo ni audio, y no gasta créditos: nada se genera sin orden expresa (`references/reglas.md` §13).
 
-Este repo es solo la release instalable. Código fuente, pruebas y desarrollo: <https://github.com/martamakes/magnific-prompt-system>.
+Este repo es la release instalable de la skill.
 
 ## Instalación
 
